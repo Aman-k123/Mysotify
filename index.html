@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySpotify - Web Player</title>
+    <title>MyMusic - Web Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
-        <!-- बायां पैनल (Sidebar) -->
+        <!-- बायां पैनल -->
         <aside class="sidebar">
-            <div class="logo">🎵 MySpotify</div>
-            <nav>
-                <ul>
-                    <li id="navHome" class="active">🏠 Home</li>
-                    <li id="navSearch">🔍 Search</li>
-                    <li id="navLibrary">📚 Your Library</li>
-                </ul>
-            </nav>
+            <div class="logo">🎵 MyMusic</div>
+            <ul>
+                <li id="navHome" class="active">🏠 Home</li>
+                <li id="navSearch">🔍 Search</li>
+                <li id="navLibrary">📚 Your Library</li>
+            </ul>
             <div class="playlist-box">
-                <p>Create your first playlist</p>
-                <span>It's easy, we'll help you</span>
+                <p>Your Playlist</p>
+                <span>Click + on any song to save it here.</span>
             </div>
         </aside>
 
-        <!-- बीच का मुख्य हिस्सा (Main Content) -->
+        <!-- बीच का मुख्य हिस्सा -->
         <main class="content">
             <div id="searchContainer" class="search-box" style="display: none;">
-                <input type="text" id="songSearchInput" placeholder="What do you want to play?">
+                <input type="text" id="songSearchInput" placeholder="Search song or artist...">
             </div>
 
             <h2 id="pageTitle">Trending Songs</h2>
-            <div id="songList" class="songs-grid">
-                <!-- JavaScript से कार्ड्स यहाँ अपने आप बनेंगे -->
-            </div>
+            <div id="songList" class="songs-grid"></div>
         </main>
 
-        <!-- दायां पैनल (Now Playing + चलती हुई पिक्चर) -->
+        <!-- दायां पैनल -->
         <aside class="right-panel">
             <h3>Now Playing</h3>
             <div class="canvas-box">
-                <!-- असली Spotify जैसी चलती हुई GIF -->
-                <img src="https://giphy.com" alt="Music Visualizer" class="canvas-gif">
+                <img id="rightCover" src="covers/1.jpg" alt="Cover">
             </div>
             <div class="right-song-info">
                 <h4 id="rightSongName">Bairen</h4>
@@ -50,7 +45,7 @@
         </aside>
     </div>
 
-    <!-- नीचे का म्यूज़िक प्लेयर (Bottom Player) -->
+    <!-- नीचे का म्यूज़िक प्लेयर -->
     <footer class="player-bar">
         <div class="song-info">
             <img id="masterCover" src="https://unsplash.com" alt="Cover">
