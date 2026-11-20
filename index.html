@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <span>🎵 MySpotify</span>
+            </div>
+            <ul>
+                <li class="active" id="navHome">🏠 Home</li>
+                <li id="navSearch">🔍 Search</li>
+                <li id="navLibrary">📚 Your Library</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <!-- Search Box (Sirf Search dabane par dikhega) -->
+            <div id="searchContainer" style="display: none; margin-bottom: 20px;">
+                <input type="text" id="songSearchInput" placeholder="Gaana ya singer search karein..." 
+                style="padding: 12px 20px; width: 100%; max-width: 400px; border-radius: 25px; border: none; outline: none; font-size: 16px;">
+            </div>
+
+            <h1 id="pageTitle">Trending Songs</h1>
+            
+            <div class="song-list" id="songList">
+                <!-- Gaane JavaScript se yahan load honge -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Music Player Bar -->
+    <div class="player-bar">
+        <div class="song-info">
+            <img src="covers/1.jpg" id="masterCover" alt="Cover">
+            <div>
+                <h4 id="masterSongName">Song Name</h4>
+                <p id="masterArtistName">Artist Name</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <div class="buttons">
+                <span id="prevBtn" style="cursor:pointer; font-size: 24px;">⏮</span>
+                <span id="masterPlay" style="cursor:pointer; font-size: 32px;">▶</span>
+                <span id="nextBtn" style="cursor:pointer; font-size: 24px;">⏭</span>
+            </div>
+            <input type="range" id="progressBar" value="0" min="0" max="100">
+        </div>
+
+        <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" id="volumeBar" value="100" min="0" max="100">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
