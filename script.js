@@ -1,6 +1,4 @@
-// ==========================================
-// APNE SONGS AUR PHOTOS YAHAN RAKHEIN
-// ==========================================
+
 const songs = [
     {
         songName: "Kesariya",
